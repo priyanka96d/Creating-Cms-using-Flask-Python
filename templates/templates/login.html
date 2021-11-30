@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+    <link rel="stylesheet" href="/static/cms.css">
+    <title>Login Page</title>
+    <style>
+        html, body 
+            {
+                height: 100%;
+            }
+            
+        .msg{
+            width: 100%;
+            height: auto;
+            font-size: 20px;
+            color: black;
+            background-color: blanchedalmond;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-border">
+
+        <form action="{{url_for('login')}}" method="POST">
+            <h2>Please Login</h2>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username">
+            </div>
+            <div class="form-group">
+                <label for="pwd">Password</label>
+                <input type="password" id="pwd" name="pwd">
+            </div>
+            <div class="form-group">
+            <input  type="submit" value="login"></input>
+            </div>
+            <div class="msg">{{ msg }}</div>
+        </form>
+    </div>
+</body>
+</html>

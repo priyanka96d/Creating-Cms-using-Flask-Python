@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMS Page</title>
+    <link rel="stylesheet" href="/static/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+    <link rel="stylesheet" href="/static/index.css">
+    <title>{{page_name}}</title>
+   
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index_project.html">
+              <img  src="{{logo_url}}">
+            </a>
+            <span style="color:blanchedalmond">{{logo}}</span>
+        </div>
+
+        <!--Navigation Bar-->
+        <div class="navbar">
+            <nav >
+              <ul>
+                  <li><a  href="{{url_for('dummy')}}" target="_blank">Login</a></li>
+                  <li><a  href="{{url_for('dummy')}}" target="_blank">Holiday</a></li>
+                  <li><a  href="{{url_for('dummy')}}" target="_blank">Site Basics</a></li>
+                  <li>
+                  {% for k,v in navbar.items() %}
+                  <a  href="{{url_for('dummy')}}" target="_blank">{{k}}</a> 
+        
+                  {% endfor %}
+                  </li>
+                  
+                  <!-- <li><a  href="#" target="_blank">{{tab4}}</a></li> -->
+              </ul>     
+            </nav>
+          </div>
+
+  </header>
+
+  <main class="section-main">
+          <img class="banner" src="{{banner}}">
+
+        <h1 style="text-align: center;"> welcome to new page</h1>
+  </main>
+</body>
+</html>

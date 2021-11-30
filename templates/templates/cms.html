@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMS Page</title>
+    <link rel="stylesheet" href="/static/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+    <link rel="stylesheet" href="/static/cms.css">
+    <title>CMS Page</title>
+   <style>
+       body{
+           color: black;
+       }
+       .greeting{
+           display: flex;
+           gap: 100px;
+           font-size: 20px;
+           color:black;
+           background-color: cadetblue;
+           justify-content: center;
+           padding: 10px;
+       }
+       a{
+           color: #000;
+       }
+       button{
+           background-color: cadetblue;;
+       }
+      
+   </style>
+</head>
+<body>
+    <div class="greeting">
+        <p>Welcome {{username}}</p>
+        <a href="{{url_for('logout')}}">Logout</a>
+        <a href="{{url_for('index')}}" target="_blank">Main Page</a>
+    </div>
+    
+    <div class="form-border">
+        
+        <form action="{{url_for('cms')}}" method="POST" >
+            <h2>Please Fill the fields</h2>
+            <div class="form-group">
+                <label for="random_id">Id Generator</label>
+                <input id="random_id" type="text" name = "random_id" placeholder={{id_number}} readonly>
+
+            <div class="form-group">
+                <h3>Navigation Tabs</h3>
+                <label for="tabs">Tab-1</label>
+                <input id="tabs" type="text" name = "tab1" placeholder="Tab1" autofocus>
+                <input id="tabs" type="text" name = "path1" placeholder="path-name">
+            </div>
+            <div class="form-group">
+                <label for="tabs">Tab-2</label>
+                <input id="tabs" type="text" name = "tab2" placeholder="Tab2" >
+                <input id="tabs" type="text" name = "path2" placeholder="path-name" >
+            </div>
+            <div class="form-group">
+                <label for="tabs">Tab-3</label>
+                <input id="tabs" type="text" name = "tab3" placeholder="Tab3" >
+                <input id="tabs" type="text" name = "path3" placeholder="path-name" >
+            </div>
+            
+            <div class="form-group">
+                <h3>Logo</h3>
+                <label for="logo">Logo Title</label>
+                <input id="logo" type="text" name="logo" placeholder="Logo Title">
+                <input type="text" id="logo_img" name="logo_img" placeholder="Logo Image URL">
+            </div>
+
+            <div class="form-group">
+                <h3>Banner Image</h3>
+                <input type="text" id="banner" name="banner" placeholder="banner Image URL">
+            </div>
+
+            <div class="form-group">
+                <h3>Parameter</h3>
+                <label for="category" id="category" name="category">Category</label>
+                <select name="category" id="category">
+                        {% for c in category %}
+                            <option value={{c}}>{{c}}</option>
+                        {% endfor %}
+                </select>
+                </div>
+                <br>
+                <button name="button" value="cmsData" >Submit</button>
+                <button type="submit" name="button" value="addRecord" >Add Record</button>
+        </div>
+               
+        </form>
+    </div>
+</body>
+</html>
