@@ -21,13 +21,13 @@ Steps to start the project:
 3) First page is the "Login.html Page".
 4) Because it is plateform for comapany employees they already have username and password. They could not create new login details. Login details are stored in mysql database. 
 5) After succesful Login CMS page will display. In this page user can give following details:-
-      i) Navigational tab name and its html url
-      ii) Logo Title
-      iii) Logo Image
-      iv) Banner URL
-      v) Choose a Category from dropdown (which category's data you want to display on main page [index.html])
-      vi) AddRecord
+      1) Navigational tab name and its html url
+      2) Logo Title
+      3) Logo Image
+      4) Banner URL
+      5) Choose a Category from dropdown (which category's data you want to display on main page [index.html])
+      6) AddRecord
 6) There are two options present in Header of cms page.
-      i) Main Page: To see what changes you made and what to display on Final User Inteface.
-      ii) Logout
+      1) Main Page: To see what changes you made and what to display on Final User Inteface.
+      2) Logout
 7) After Clicking AddRecord button new page will display. In this you can add new product details.     
